@@ -1,0 +1,170 @@
+@import url('./confetty.css');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	background: black;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.container {
+	max-width: 1250px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 30px 15px;
+}
+
+.header-title {
+	text-align: center;
+	color: #fff;
+	font-size: calc(1vw + 1vh + 10px);
+}
+
+.game-section {
+	padding-top: 50px;
+	opacity: 0;
+	transform: scale(0.9);
+	transition: transform 0.4s ease;
+	-webkit-animation: fade 0.4s forwards;
+	animation: fade 0.4s forwards;
+}
+
+.game-section-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.game-section-title {
+	color: #fff;
+	margin-bottom: 40px;
+	font-size: calc(1vw + 1vh + 3px);
+}
+
+.game-menu-diffical-btn {
+	margin-bottom: 20px;
+	background-color: rgb(25, 203, 25);
+	opacity: 0.7;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: opacity 0.4s ease;
+	color: #fff;
+	padding: 20px 30px;
+	font-weight: bold;
+	font-size: calc(1vw + 1vh + 3px);
+	line-height: 1.1;
+	letter-spacing: 1px;
+	border-radius: 8px;
+}
+.game-menu-diffical-btn:last-child {
+	margin-bottom: 0px;
+}
+.game-menu-diffical-btn:hover {
+	opacity: 1;
+}
+
+.game-table {
+	max-width: 500px;
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 30px;
+}
+
+.game-card {
+	width: 50px;
+	height: 100px;
+	aspect-ratio: 1;
+	opacity: 0.8;
+	cursor: pointer;
+	flex: 0 0 21%;
+	display: grid;
+	place-items: center;
+	background: purple;
+	border-radius: 8px;
+	transition: all 0.2s linear;
+}
+.game-card:hover {
+	opacity: 1;
+	background: rgb(195, 190, 206);
+}
+.game-card.successfully {
+	background: green !important;
+	color: #fff;
+}
+.game-card i {
+	display: none;
+	font-size: 40px;
+}
+.game-card i:first-child {
+	display: block;
+}
+.game-card.rotate {
+	background: rgb(96, 96, 214);
+	transform: perspective(100px) rotateY(180deg);
+}
+.game-card.rotate i:first-child {
+	display: none;
+}
+.game-card.rotate i:last-child {
+	display: block;
+}
+
+.restart-btn {
+	display: block;
+	cursor: pointer;
+	border: none;
+	background: #fff;
+	opacity: 0.9;
+	color: #222;
+	font-weight: 500;
+	font-size: 18px;
+	transition: all 0.4s ese;
+	padding: 15px 40px;
+	border-radius: 8px;
+}
+.restart-btn:hover {
+	opacity: 1;
+	background: #ccc;
+}
+
+@-webkit-keyframes fade {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+} /*# sourceMappingURL=styles.css.map */
